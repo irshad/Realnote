@@ -27,3 +27,11 @@ function copyClipboard() {
 function sendEmail() {
     window.location = "mailto:irshad@phonerefer.com";
 }
+
+// Buttons Disabled If Textarea Is Empty - Jquery
+let $button = $("#r-btn, #c-btn");
+$button.prop("disabled", true);
+
+$("#data").keyup(function () {
+    $button.prop("disabled", (this.value === "") ? true : false);
+});
