@@ -1,6 +1,7 @@
 body {
-    background-color: #ffffff;
     color: #212733;
+    background-color: #ffffff;
+    font-family: "parse-grotesk-mono-bold", sans-serif;
 }
 
 .container {
@@ -15,6 +16,7 @@ textarea {
     resize: none;
     background-color: #ffffff;
     border: solid 1px #51c7da;
+    font-family: "parse-grotesk-mono-regular", sans-serif;
 }
 
 #title {
@@ -35,6 +37,7 @@ textarea {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background-color: #51c7da;
     color: #212733;
+    font-family: "parse-grotesk-mono-bold", sans-serif;
 }
 
 .btn:hover {
@@ -74,4 +77,21 @@ span {
         border-radius: 5px;
         resize: none;
     }
+}
+
+/*---------------------------------- fonts ---------------------------------*/
+
+@font-face {
+    font-family: "parse-grotesk-mono-thin";
+    src: url(../font/parsegroteskmono_thin.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "parse-grotesk-mono-regular";
+    src: url(../font/parsegroteskmono_regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "parse-grotesk-mono-bold";
+    src: url(../font/parsegroteskmono_bold.otf) format("opentype");
 }
