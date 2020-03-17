@@ -1,7 +1,6 @@
 body {
     background-color: #ffffff;
     color: #212733;
-    
 }
 
 .container {
@@ -16,7 +15,6 @@ textarea {
     resize: none;
     background-color: #ffffff;
     border: solid 1px #51c7da;
-    font-family: "parse-grotesk-mono-regular", sans-serif;
 }
 
 #title {
@@ -37,7 +35,6 @@ textarea {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background-color: #51c7da;
     color: #212733;
-    font-family: "parse-grotesk-mono-regular", sans-serif;
 }
 
 .btn:hover {
@@ -61,16 +58,8 @@ textarea:focus {
 .check-b {
     color: #51c7da;
     text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-    font-family: "parse-grotesk-mono-regular", sans-serif;
 }
 
-#charcount{
-    font-family: "parse-grotesk-mono-regular", sans-serif;
-}
-
-#title{
-    font-family: "parse-grotesk-mono-regular", sans-serif;    
-}
 span {
     text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
@@ -85,9 +74,4 @@ span {
         border-radius: 5px;
         resize: none;
     }
-}
-
-@font-face {
-    font-family: "parse-grotesk-mono-regular";
-    src: url(../font/parsegroteskmono_regular.otf) format("opentype");
 }
