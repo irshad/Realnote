@@ -1,11 +1,11 @@
 {
-    "name": "Realnote by Irshad Ali",
+    "name": "Realnote",
     "short_name": "Realnote",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#f0f2f5",
     "theme_color": "#f0f2f5",
-    "description": "Realnote, On the go online text Writer - By Irshad Ali",
+    "description": "Realnote, On the go online text Writer By - Irshad Ali",
     "icons": [{
         "src": "img/icon384.png",
         "sizes": "384x384",

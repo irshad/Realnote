@@ -71,13 +71,13 @@
             <span id="charcount">0</span>
             <span class="check-b">]</span>
             <!-- - Chars -->
-            <span>&nbsp;<button id="r-btn" type="reset" onclick="refreshPage()" class="btn"><i
+            <span>&nbsp;<button id="r-btn" type="reset" title="Clear textarea" onclick="refreshPage()" class="btn"><i
                         class="fas fa-trash-alt"></i>
                     Clear</button>
-            </span>&nbsp;<button class="btn" id="c-btn" type="submit" onclick="copyClipboard()"><i class="far fa-clipboard"></i>
+            </span>&nbsp;<button class="btn" id="c-btn" type="submit" title="Copy to clipboard" onclick="copyClipboard()"><i class="far fa-clipboard"></i>
             Copy</button>&nbsp;<span id="title"><i class="fas fa-bookmark"></i> Realnote</span>
-            <span><button class="btn" id="d-btn" onclick="download();"><i class="fas fa-download"></i> Download</button></span>&nbsp;
-            <span><button class="btn" onclick="sendEmail();"><i class="fas fa-envelope"></i></button></span>
+            <span><button class="btn" id="d-btn" title="Download in .txt file" onclick="download();"><i class="fas fa-download"></i> Download</button></span>&nbsp;
+            <span><button class="btn" title="Contact me" onclick="sendEmail();"><i class="fas fa-envelope"></i></button></span>
         </span>
     </div>
     <script src="src/app.js"></script>
