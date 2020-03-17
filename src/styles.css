@@ -1,7 +1,7 @@
 body {
-    color: #212733;
     background-color: #ffffff;
-    font-family: "parse-grotesk-mono-regular", sans-serif;
+    color: #212733;
+    
 }
 
 .container {
@@ -61,8 +61,16 @@ textarea:focus {
 .check-b {
     color: #51c7da;
     text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    font-family: "parse-grotesk-mono-regular", sans-serif;
 }
 
+#charcount{
+    font-family: "parse-grotesk-mono-regular", sans-serif;
+}
+
+#title{
+    font-family: "parse-grotesk-mono-regular", sans-serif;    
+}
 span {
     text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
@@ -79,19 +87,7 @@ span {
     }
 }
 
-/*---------------------------------- fonts ---------------------------------*/
-
-@font-face {
-    font-family: "parse-grotesk-mono-thin";
-    src: url(../font/parsegroteskmono_thin.otf) format("opentype");
-}
-
 @font-face {
     font-family: "parse-grotesk-mono-regular";
     src: url(../font/parsegroteskmono_regular.otf) format("opentype");
-}
-
-@font-face {
-    font-family: "parse-grotesk-mono-bold";
-    src: url(../font/parsegroteskmono_bold.otf) format("opentype");
 }
