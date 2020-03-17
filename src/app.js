@@ -46,7 +46,7 @@ function sendEmail() {
 }
 
 // Buttons Disabled If Textarea Is Empty - Jquery
-let $button = $("#r-btn, #c-btn");
+let $button = $("#r-btn, #c-btn, #d-btn");
 $button.prop("disabled", true);
 
 $("#data").keyup(function () {
