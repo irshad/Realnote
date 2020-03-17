@@ -42,7 +42,7 @@ function download() {
 
 // Mail Button
 function sendEmail() {
-    window.location = "mailto:irshad@phonerefer.com";
+    window.open('https://twitter.com/imirshadali');
 }
 
 // Buttons Disabled If Textarea Is Empty - Jquery
