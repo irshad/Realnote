@@ -42,7 +42,7 @@ function download() {
 
 // Mail Button
 function sendEmail() {
-    window.open('https://twitter.com/imirshadali');
+    window.open= "https://twitter.com/imirshadali";
 }
 
 // Buttons Disabled If Textarea Is Empty - Jquery
