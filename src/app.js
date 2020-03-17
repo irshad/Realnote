@@ -5,7 +5,7 @@ navigator.serviceWorker && navigator.serviceWorker.register('SW.js').then(functi
 
  // Char count
  function countChars(countfrom, displayto) {
-    var len = document.getElementById(countfrom).value.length;
+    let len = document.getElementById(countfrom).value.length;
     document.getElementById(displayto).innerHTML = len;
 }
 
