@@ -23,6 +23,23 @@ function copyClipboard() {
     document.execCommand("copy"); // Copy the text inside the text field
 }
 
+// Download Function
+function download() {
+    let text = document.getElementById("data").value;
+    text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+    let blob = new Blob([text], {
+        type: "text/plain"
+    });
+    let anchor = document.createElement("a");
+    anchor.download = "Realnote.txt";
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.target = "_blank";
+    anchor.style.display = "none"; // just to be safe!
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+}
+
 // Mail Button
 function sendEmail() {
     window.location = "mailto:irshad@phonerefer.com";
