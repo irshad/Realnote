@@ -1,7 +1,7 @@
 body {
     color: #212733;
     background-color: #ffffff;
-    font-family: "parse-grotesk-mono-bold", sans-serif;
+    font-family: "parse-grotesk-mono-regular", sans-serif;
 }
 
 .container {
@@ -37,7 +37,7 @@ textarea {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background-color: #51c7da;
     color: #212733;
-    font-family: "parse-grotesk-mono-bold", sans-serif;
+    font-family: "parse-grotesk-mono-regular", sans-serif;
 }
 
 .btn:hover {
