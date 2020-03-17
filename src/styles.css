@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f2f5;
+    background-color: #ffffff;
     color: #212733;
 }
 
@@ -13,7 +13,7 @@ textarea {
     font-size: 16px;
     border-radius: 5px;
     resize: none;
-    background-color: #f0f2f5;
+    background-color: #ffffff;
     border: solid 1px #51c7da;
 }
 
@@ -69,7 +69,7 @@ span {
     textarea {
         width: 100%;
         height: 87vh;
-        background-color: #f0f2f5;
+        background-color: #ffffff;
         font-size: 14px;
         border-radius: 5px;
         resize: none;
