@@ -40,9 +40,14 @@ function download() {
     document.body.removeChild(anchor);
 }
 
+// Twitter Button
+function twitter() {
+    window.open('https://twitter.com/imirshadali');
+}
+
 // Mail Button
 function sendEmail() {
-    window.open('https://twitter.com/imirshadali');
+    window.location="mailto:irshad@phonerefer.com";
 }
 
 // Buttons Disabled If Textarea Is Empty - Jquery

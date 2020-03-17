@@ -74,4 +74,10 @@ span {
         border-radius: 5px;
         resize: none;
     }
+    #mob-1{
+        display: none;
+    }
+    #mob-2{
+        display: none;
+    }
 }
