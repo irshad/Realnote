@@ -57,3 +57,9 @@ $button.prop("disabled", true);
 $("#data").keyup(function () {
     $button.prop("disabled", (this.value === "") ? true : false);
 });
+
+// Dark Mode
+function black() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+ }

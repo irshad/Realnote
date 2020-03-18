@@ -13,7 +13,6 @@ textarea {
     font-size: 16px;
     border-radius: 5px;
     resize: none;
-    background-color: #ffffff;
     border: solid 1px #51c7da;
 }
 
@@ -81,3 +80,9 @@ span {
         display: none;
     }
 }
+/* -------------------------------------------- */
+
+.dark-mode {
+    background-color: #212733;
+    color: white;
+  }
