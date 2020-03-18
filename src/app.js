@@ -39,17 +39,7 @@
      anchor.click();
      document.body.removeChild(anchor);
  }
-/*
- // Twitter Button
- function twitter() {
-     window.open('https://twitter.com/imirshadali');
- }
 
- // Mail Button
- function sendEmail() {
-     window.location = "mailto:irshad@phonerefer.com";
- }
-*/
  // Buttons Disabled If Textarea Is Empty - Jquery
  let $button = $("#r-btn, #c-btn, #d-btn");
  $button.prop("disabled", true);
@@ -64,6 +54,7 @@
 //      element.classList.toggle("dark-mode");
 //  }
 
+// Down Slider Nav
 function openNav() {
     document.getElementById("myNav").style.height = "100%";
   }

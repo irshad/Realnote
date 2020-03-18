@@ -73,9 +73,6 @@ span {
         border-radius: 5px;
         resize: none;
     }
-    /* #mob-3 {
-        display: none;
-    } */
 }
 
 /* ------------ Dark mode---------------- */
@@ -85,6 +82,7 @@ span {
     color: white;
 } */
 
+/* ------------ Nav ---------------- */
 .overlay {
     height: 0%;
     width: 100%;
@@ -145,7 +143,7 @@ h4 {
 }
 
 p{
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .apps {
