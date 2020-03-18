@@ -73,16 +73,19 @@ span {
         border-radius: 5px;
         resize: none;
     }
-    #mob-1{
+
+    #mob-1 {
         display: none;
     }
-    #mob-2{
+
+    #mob-2 {
         display: none;
     }
 }
-/* -------------------------------------------- */
 
-.dark-mode {
+/* ------------ Dark mode---------------- */
+
+/* .dark-mode {
     background-color: #212733;
     color: white;
-  }
+  } */
