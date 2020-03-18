@@ -64,11 +64,10 @@
 //      element.classList.toggle("dark-mode");
 //  }
 
-// Slider Nav
 function openNav() {
-    document.getElementById("mySidenav").style.width = "180px";
+    document.getElementById("myNav").style.height = "100%";
   }
   
   function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("myNav").style.height = "0%";
   }

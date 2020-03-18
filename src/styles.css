@@ -94,41 +94,60 @@ span {
     color: white;
 } */
 
-/* ------------ Side Nav ---------------- */
-.sidenav {
-    height: 82.2vh;
-    width: 0;
+.overlay {
+    height: 0%;
+    width: 100%;
     position: fixed;
-    text-align: center;
     z-index: 1;
-    top: 13px;
-    left: 9.9px;
+    top: 0;
+    left: 0;
     background-color: #51c7da;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-    border-radius: 3px 10px 10px 3px;
-}
-
-.sidenav a {
-    padding: 10px;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
     text-decoration: none;
-    font-size: 22px;
+    font-weight: 600;
+    font-size: 28px;
     color: #212733;
     display: block;
     transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-.sidenav .closebtn {
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #ffffff;
+  }
+  
+  .overlay .closebtn {
     position: absolute;
-    top: 0;
-    right: 15px;
-    font-size: 36px;
-    margin-left: 50px;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+
+  hr.line {
+    border: 1px solid #212733;
+    width: 80%;
 }
 
 h4 {
@@ -137,22 +156,4 @@ h4 {
 
 .apps {
     font-size: 18px !important;
-}
-
-hr.line {
-    border: 1px solid #212733;
-    width: 140px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-        height: 100%;
-        top: 0px;
-        left: 9.9px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
 }
