@@ -73,18 +73,9 @@ span {
         border-radius: 5px;
         resize: none;
     }
-
-    #mob-1 {
+    /* #mob-3 {
         display: none;
-    }
-
-    #mob-2 {
-        display: none;
-    }
-
-    #mob-3 {
-        display: none;
-    }
+    } */
 }
 
 /* ------------ Dark mode---------------- */
@@ -108,7 +99,7 @@ span {
   
   .overlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
