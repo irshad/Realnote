@@ -63,6 +63,8 @@
 //      let element = document.body;
 //      element.classList.toggle("dark-mode");
 //  }
+
+// Slider Nav
 function openNav() {
     document.getElementById("mySidenav").style.width = "180px";
   }

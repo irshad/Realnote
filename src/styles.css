@@ -81,7 +81,8 @@ span {
     #mob-2 {
         display: none;
     }
-    #mob-3{
+
+    #mob-3 {
         display: none;
     }
 }
@@ -104,7 +105,7 @@ span {
     left: 9.9px;
     background-color: #51c7da;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     padding-top: 60px;
     border-radius: 3px 10px 10px 3px;
 }
@@ -112,8 +113,7 @@ span {
 .sidenav a {
     padding: 10px;
     text-decoration: none;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 22px;
     color: #212733;
     display: block;
     transition: 0.3s;
@@ -131,13 +131,28 @@ span {
     margin-left: 50px;
 }
 
+h4 {
+    text-decoration: underline;
+}
+
+.apps {
+    font-size: 18px !important;
+}
+
+hr.line {
+    border: 1px solid #212733;
+    width: 140px;
+}
+
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
+        height: 100%;
+        top: 0px;
+        left: 9.9px;
     }
 
     .sidenav a {
         font-size: 18px;
-        font-weight: 600;
     }
 }
