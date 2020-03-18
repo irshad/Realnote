@@ -81,6 +81,9 @@ span {
     #mob-2 {
         display: none;
     }
+    #mob-3{
+        display: none;
+    }
 }
 
 /* ------------ Dark mode---------------- */
@@ -88,4 +91,53 @@ span {
 /* .dark-mode {
     background-color: #212733;
     color: white;
-  } */
+} */
+
+/* ------------ Side Nav ---------------- */
+.sidenav {
+    height: 82.2vh;
+    width: 0;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    top: 13px;
+    left: 9.9px;
+    background-color: #51c7da;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 3px 10px 10px 3px;
+}
+
+.sidenav a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #212733;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
