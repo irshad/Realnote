@@ -108,7 +108,7 @@ span {
     text-decoration: none;
     font-size: 28px;
     color: #212733;
-    display: block;
+    display: inline-block;
     transition: 0.3s;
   }
   
