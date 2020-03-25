@@ -83,6 +83,9 @@ span {
         height: 23px !important;
         margin-top: 10px;
     }
+    .close{
+        display: none;
+    }
 }
 
 /* ------------ Dark mode---------------- */
