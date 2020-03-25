@@ -73,6 +73,16 @@ span {
         border-radius: 5px;
         resize: none;
     }
+    #filename{
+        width: 250px;
+        height: 20px;
+        border: 1px solid #51c7da;
+        border-radius: 3px;
+    }
+    #download{
+        height: 23px !important;
+        margin-top: 10px;
+    }
 }
 
 /* ------------ Dark mode---------------- */
