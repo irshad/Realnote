@@ -73,17 +73,20 @@ span {
         border-radius: 5px;
         resize: none;
     }
-    #filename{
+
+    #filename {
         width: 250px;
         height: 20px;
         border: 1px solid #51c7da;
         border-radius: 3px;
     }
-    #download{
+
+    #download {
         height: 23px !important;
         margin-top: 10px;
     }
-    .close{
+
+    .close {
         display: none;
     }
 }
@@ -103,50 +106,58 @@ span {
     z-index: 1;
     top: 0;
     left: 0;
-     background-color: #51c7da; /*rgba(82, 200, 218, 0.75) */
+    background-color: #51c7da;
+    /*rgba(82, 200, 218, 0.75) */
     overflow-y: hidden;
     transition: 0.5s;
-  }
-  
-  .overlay-content {
+}
+
+.overlay-content {
     position: relative;
     top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
-  }
-  
-  .overlay a {
+}
+
+.overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 28px;
     color: #212733;
     display: inline-block;
     transition: 0.3s;
-  }
-  
-  .overlay a:hover, .overlay a:focus {
+}
+
+.overlay a:hover,
+.overlay a:focus {
     color: #ffffff;
-  }
-  
-  .overlay .closebtn {
+}
+
+.overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-    }
-  }
+}
 
-  hr.line {
+@media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+hr.line {
     border: 1px solid #212733;
     width: 80%;
 }
@@ -155,7 +166,7 @@ h4 {
     text-decoration: underline;
 }
 
-p{
+p {
     margin-top: 40px;
 }
 
@@ -163,58 +174,79 @@ p{
     font-size: 18px !important;
 }
 
-.follow a{
+.follow a {
     display: inline;
 }
 
 /* ----------------------------------- */
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 250px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 200px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
     background-color: #ffffff;
     margin: auto;
     padding: 20px;
     /* border: 1px solid #51c7da; */
     width: 75%;
-    text-align:center;
+    text-align: center;
     border-radius: 8px;
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #212733;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  #filename{
-      width: 250px;
-      height: 20px;
-      border: 1px solid #51c7da;
-      border-radius: 3px;
-  }
-  #download{
-      height: 23px !important;
-  }
+#filename {
+    width: 250px;
+    height: 20px;
+    border: 1px solid #51c7da;
+    color: #212733;
+    border-radius: 3px;
+}
+
+#filename:focus {
+    outline: none;
+}
+
+#download {
+    height: 23.2px !important;
+}
+
+#info {
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+}
