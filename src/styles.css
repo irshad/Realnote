@@ -168,10 +168,6 @@ h4 {
     text-decoration: underline;
 }
 
-p {
-    margin-top: 40px;
-}
-
 .apps {
     font-size: 18px !important;
 }
@@ -186,7 +182,7 @@ p {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 200px;
+    padding-top: 180px;
     left: 0;
     top: 0;
     width: 100%;
@@ -224,7 +220,7 @@ p {
 
 #filename {
     width: 250px;
-    height: 20px;
+    height: 21px;
     border: 1px solid #51c7da;
     color: #212733;
     border-radius: 3px;
@@ -239,7 +235,7 @@ p {
 }
 
 #info {
-    color: #ffffff;
+    color: #454545;
     text-align: center;
-    font-size: 18px;
+    font-size: 21px;
 }
