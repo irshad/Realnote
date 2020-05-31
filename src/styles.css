@@ -241,3 +241,20 @@ p {
     text-align: center;
     font-size: 18px;
 }
+
+/*----------------------------------fonts----------------------------------*/
+
+@font-face {
+    font-family: "parse-grotesk-mono-thin";
+    src: url(../font/parsegroteskmono_thin.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "parse-grotesk-mono-regular";
+    src: url(../font/parsegroteskmono_regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "parse-grotesk-mono-bold";
+    src: url(../font/parsegroteskmono_bold.otf) format("opentype");
+}
