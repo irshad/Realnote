@@ -1,14 +1,13 @@
 body {
     background-color: #ffffff;
     color: #212733;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
 }
 
 .container {
     padding-right: 6px;
 }
 
+/*------------------ Textarea -------------------*/
 textarea {
     width: 100%;
     height: 92.7vh;
@@ -18,6 +17,11 @@ textarea {
     border: solid 1px #51c7da;
 }
 
+textarea:focus {
+    outline: none !important;
+}
+
+/*-------------------- Title --------------------*/
 #title {
     float: right;
     font-weight: 600;
@@ -25,6 +29,11 @@ textarea {
     text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
+.fa-bookmark {
+    color: #51c7da;
+}
+
+/*-------------------- Button -------------------*/
 .btn {
     border: none;
     padding-left: 5px;
@@ -48,28 +57,15 @@ textarea {
     outline: none !important;
 }
 
-.fa-bookmark {
-    color: #51c7da;
-}
-
-textarea:focus {
-    outline: none !important;
-}
-
 .check-b {
     color: #51c7da;
-    text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
-
-span {
-    text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 /********************** Media Quries ***********************/
 @media only screen and (max-width: 600px) {
     textarea {
         width: 100%;
-        height: 87vh;
+        height: 100vh;
         background-color: #ffffff;
         font-size: 14px;
         border-radius: 5px;
@@ -92,13 +88,6 @@ span {
         display: none;
     }
 }
-
-/* ------------ Dark mode---------------- */
-
-/* .dark-mode {
-    background-color: #212733;
-    color: white;
-} */
 
 /* ------------ Nav ---------------- */
 .overlay {
@@ -176,8 +165,7 @@ h4 {
     display: inline;
 }
 
-/* ----------------------------------- */
-/* The Modal (background) */
+/*--------------------------  The Modal (background) -------------------------- */
 .modal {
     display: none;
     position: fixed;
