@@ -59,12 +59,6 @@ window.onload = () => {
      $button.prop("disabled", (this.value === "") ? true : false);
  });
 
- // Dark Mode
-//  function black() {
-//      let element = document.body;
-//      element.classList.toggle("dark-mode");
-//  }
-
 // Down Slider Nav
 function openNav() {
     document.getElementById("myNav").style.height = "100%";
@@ -73,8 +67,6 @@ function openNav() {
   function closeNav() {
     document.getElementById("myNav").style.height = "0%";
   }
-
-
 
 // Get the modal
 let modal = document.getElementById("myModal");
