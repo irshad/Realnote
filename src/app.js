@@ -94,3 +94,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+setTimeout(function(){
+  document.getElementById('splash').style.display = 'none';
+}, 4000);

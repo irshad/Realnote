@@ -41,6 +41,7 @@
 
     <!----------------------------- Stylesheet ------------------------->
     <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/splash.css">
 
     <!--------- Add to homescreen Fallback for manifest.json ----------->
     <link rel="manifest" href="manifest.json">
@@ -63,7 +64,9 @@
 </head>
 
 <body>
-
+    <div class="cover" id="splash">
+        <img src="https://res.cloudinary.com/phonerefer/image/upload/v1592054468/axnoqdnbu18p9lllrjtq.svg" alt="Twitter Bird" id="icon">
+    </div>
     <div class="container">
         <textarea class="text" id="data" cols="40" rows="5" onkeyup="countChars('data','charcount');"
             onkeydown="countChars('data','charcount');" onmouseout="countChars('data','charcount');"
