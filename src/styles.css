@@ -1,6 +1,6 @@
 body {
-    background-color: #ffffff;
     color: #212733;
+    background-color: #ffffff;
 }
 
 .container {
@@ -42,15 +42,15 @@ textarea:focus {
     padding-bottom: 3px;
     border-radius: 3px;
     cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    background-color: #51c7da;
     color: #212733;
+    background-color: #51c7da;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .btn:hover {
-    background-color: #212733;
-    color: #eff0f3;
     transition: 0.3s;
+    color: #eff0f3;
+    background-color: #212733;
 }
 
 .btn:focus {
@@ -65,18 +65,18 @@ textarea:focus {
 @media only screen and (max-width: 600px) {
     textarea {
         width: 100%;
+        resize: none;
         height: 87vh;
-        background-color: #ffffff;
         font-size: 14px;
         border-radius: 5px;
-        resize: none;
+        background-color: #ffffff;
     }
 
     #filename {
         width: 250px;
         height: 20px;
-        border: 1px solid #51c7da;
         border-radius: 3px;
+        border: 1px solid #51c7da;
     }
 
     #download {
@@ -89,7 +89,7 @@ textarea:focus {
     }
 }
 
-/* ------------ Nav ---------------- */
+/* --------------- Nav ---------------- */
 .overlay {
     height: 0%;
     width: 100%;
@@ -97,10 +97,10 @@ textarea:focus {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #51c7da;
-    /*rgba(82, 200, 218, 0.75) */
     overflow-y: hidden;
     transition: 0.5s;
+    background-color: #51c7da;
+    /*rgba(82, 200, 218, 0.75) */
 }
 
 .overlay-content {
@@ -113,11 +113,11 @@ textarea:focus {
 
 .overlay a {
     padding: 8px;
-    text-decoration: none;
     font-size: 28px;
-    color: #212733;
-    display: inline-block;
     transition: 0.3s;
+    color: #212733;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .overlay a:hover,
@@ -126,10 +126,10 @@ textarea:focus {
 }
 
 .overlay .closebtn {
-    position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
+    position: absolute;
 }
 
 @media screen and (max-height: 450px) {
@@ -142,15 +142,15 @@ textarea:focus {
     }
 
     .overlay .closebtn {
-        font-size: 40px;
         top: 15px;
         right: 35px;
+        font-size: 40px;
     }
 }
 
 hr.line {
-    border: 1px solid #212733;
     width: 80%;
+    border: 1px solid #212733;
 }
 
 h4 {
@@ -167,51 +167,51 @@ h4 {
 
 /*--------------------------  The Modal (background) -------------------------- */
 .modal {
-    display: none;
-    position: fixed;
     z-index: 1;
-    padding-top: 180px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    display: none;
     overflow: auto;
+    position: fixed;
+    padding-top: 180px;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #ffffff;
+    width: 75%;
     margin: auto;
     padding: 20px;
     /* border: 1px solid #51c7da; */
-    width: 75%;
     text-align: center;
     border-radius: 8px;
+    background-color: #ffffff;
 }
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
     float: right;
     font-size: 28px;
+    color: #aaaaaa;
     font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
+    cursor: pointer;
     color: #212733;
     text-decoration: none;
-    cursor: pointer;
 }
 
 #filename {
     width: 250px;
     height: 21px;
-    border: 1px solid #51c7da;
-    color: #212733;
     border-radius: 3px;
+    color: #212733;
+    border: 1px solid #51c7da;
 }
 
 #filename:focus {
@@ -223,7 +223,7 @@ h4 {
 }
 
 #info {
-    color: #454545;
-    text-align: center;
     font-size: 18px;
+    text-align: center;
+    color: #454545;
 }

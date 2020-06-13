@@ -1,4 +1,5 @@
 .cover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 	background: #51c7da;
 	position: fixed;
 	width: 98.9%;
@@ -18,10 +19,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: var(--size);
-	animation: zoom-in 2s
-		/*infinite*/
-	;
+	animation: zoom-in 2s;
 	animation-delay: 2s;
+	/*infinite*/
 }
 
 @keyframes zoom-in {
@@ -58,7 +58,5 @@
 	.cover {
 		width: 95.9%;
 		height: 97.6%;
-		/*infinite*/
-		/* height: 88%; */
 	}
 }
