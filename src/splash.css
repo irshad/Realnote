@@ -57,7 +57,7 @@
 @media only screen and (max-width: 600px) {
 	.cover {
 		width: 95.8%;
-		height: 88%;
+		height: 100%;
 		/*infinite*/
 		/* height: 88%; */
 	}
