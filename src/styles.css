@@ -14,7 +14,7 @@ textarea {
     font-size: 16px;
     border-radius: 5px;
     resize: none;
-    border: solid 1px #51c7da;
+    border: solid 1px #ffcc5c;
 }
 
 textarea:focus {
@@ -30,7 +30,7 @@ textarea:focus {
 }
 
 .fa-bookmark {
-    color: #51c7da;
+    color: #ffcc5c;
 }
 
 /*-------------------- Button -------------------*/
@@ -43,7 +43,7 @@ textarea:focus {
     border-radius: 3px;
     cursor: pointer;
     color: #212733;
-    background-color: #51c7da;
+    background-color: #ffcc5c;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -58,7 +58,7 @@ textarea:focus {
 }
 
 .check-b {
-    color: #51c7da;
+    color: #ffcc5c;
 }
 
 /********************** Media Quries ***********************/
@@ -76,7 +76,7 @@ textarea:focus {
         width: 250px;
         height: 20px;
         border-radius: 3px;
-        border: 1px solid #51c7da;
+        border: 1px solid #ffcc5c;
     }
 
     #download {
@@ -99,7 +99,7 @@ textarea:focus {
     left: 0;
     overflow-y: hidden;
     transition: 0.5s;
-    background-color: #51c7da;
+    background-color: #ffcc5c;
     /*rgba(82, 200, 218, 0.75) */
 }
 
@@ -185,7 +185,7 @@ h4 {
     width: 75%;
     margin: auto;
     padding: 20px;
-    /* border: 1px solid #51c7da; */
+    /* border: 1px solid #ffcc5c; */
     text-align: center;
     border-radius: 8px;
     background-color: #ffffff;
@@ -211,7 +211,7 @@ h4 {
     height: 21px;
     border-radius: 3px;
     color: #212733;
-    border: 1px solid #51c7da;
+    border: 1px solid #ffcc5c;
 }
 
 #filename:focus {

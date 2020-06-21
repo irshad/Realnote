@@ -6,7 +6,7 @@
 	opacity: 0;
     border-radius: 5px;
 	animation: fade-out 4s;
-	background: #51c7da;
+	background: #ffcc5c;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
