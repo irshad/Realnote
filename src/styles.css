@@ -14,7 +14,7 @@ textarea {
     font-size: 16px;
     border-radius: 5px;
     resize: none;
-    border: solid 1px #ffcc5c;
+    border: solid 1px red;
 }
 
 textarea:focus {
