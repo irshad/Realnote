@@ -1,0 +1,3 @@
+function openPage() {
+    window.location = '/';
+}

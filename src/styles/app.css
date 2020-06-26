@@ -1,13 +1,4 @@
-body {
-    color: #212733;
-    background-color: #ffffff;
-}
-
-.container {
-    padding-right: 7px;
-}
-
-/*------------------ Textarea -------------------*/
+/* textarea */
 textarea {
     width: 100%;
     height: 92.7vh;
@@ -21,9 +12,10 @@ textarea:focus {
     outline: none !important;
 }
 
-/*-------------------- Title --------------------*/
+/* title */
 #title {
     float: right;
+    padding-right: 15px;
     font-weight: 600;
     color: #212733;
     text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -33,7 +25,7 @@ textarea:focus {
     color: #ffcc5c;
 }
 
-/*-------------------- Button -------------------*/
+/* button */
 .btn {
     border: none;
     padding-left: 5px;
@@ -61,35 +53,7 @@ textarea:focus {
     color: #ffcc5c;
 }
 
-/********************** Media Quries ***********************/
-@media only screen and (max-width: 600px) {
-    textarea {
-        width: 100%;
-        resize: none;
-        height: 87vh;
-        font-size: 14px;
-        border-radius: 5px;
-        background-color: #ffffff;
-    }
-
-    #filename {
-        width: 250px;
-        height: 20px;
-        border-radius: 3px;
-        border: 1px solid #ffcc5c;
-    }
-
-    #download {
-        height: 23px !important;
-        margin-top: 10px;
-    }
-
-    .close {
-        display: none;
-    }
-}
-
-/* --------------- Nav ---------------- */
+/* navbar */
 .overlay {
     height: 0%;
     width: 100%;
@@ -100,7 +64,6 @@ textarea:focus {
     overflow-y: hidden;
     transition: 0.5s;
     background-color: #ffcc5c;
-    /*rgba(82, 200, 218, 0.75) */
 }
 
 .overlay-content {
@@ -132,22 +95,6 @@ textarea:focus {
     position: absolute;
 }
 
-@media screen and (max-height: 450px) {
-    .overlay {
-        overflow-y: auto;
-    }
-
-    .overlay a {
-        font-size: 20px
-    }
-
-    .overlay .closebtn {
-        top: 15px;
-        right: 35px;
-        font-size: 40px;
-    }
-}
-
 hr.line {
     width: 80%;
     border: 1px solid #212733;
@@ -165,7 +112,7 @@ h4 {
     display: inline;
 }
 
-/*--------------------------  The Modal (background) -------------------------- */
+/* pop modal */
 .modal {
     z-index: 1;
     left: 0;
@@ -180,7 +127,6 @@ h4 {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content */
 .modal-content {
     width: 75%;
     margin: auto;
@@ -191,7 +137,6 @@ h4 {
     background-color: #ffffff;
 }
 
-/* The Close Button */
 .close {
     float: right;
     font-size: 28px;
@@ -226,4 +171,51 @@ h4 {
     font-size: 18px;
     text-align: center;
     color: #454545;
+}
+
+/* media quries */
+@media only screen and (max-width: 600px) {
+    textarea {
+        width: 100%;
+        height: 87vh;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+
+    #title {
+        padding-right: 5px;
+    }
+
+    #filename {
+        width: 250px;
+        height: 20px;
+        border-radius: 3px;
+        border: 1px solid #ffcc5c;
+    }
+
+    #download {
+        height: 23px !important;
+        margin-top: 10px;
+    }
+
+    .close {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        top: 15px;
+        right: 35px;
+        font-size: 40px;
+    }
 }
