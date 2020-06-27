@@ -5,9 +5,17 @@
  }
 
  // Reset Button Reloads The Page
- function refreshPage() {
-     window.location.reload();
- }
+//  function refreshPage() {
+//      window.location.reload();
+//  }
+
+// new text
+function clearStorage() {
+    if (confirm("Are you sure you want to clear? This will erase all the content.")) {
+        window.localStorage.clear();
+        location.reload();
+    }
+}
 
  // Copy To Clipboard
  function copyClipboard() {

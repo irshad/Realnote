@@ -63,12 +63,3 @@ const AutoSave = (function () {
     };
 
 }());
-
-// new text
-function clearStorage() {
-    if (confirm("Are you sure you want to create a new text? This will erase all the content.")) {
-        window.localStorage.clear();
-        document.getElementById("data").innerHTML= "Clear this write yours..";
-        location.reload();
-    }
-}
