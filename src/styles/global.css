@@ -7,3 +7,16 @@ body {
     padding-right: 7px;
     /* margin-left: 50px; */
 }
+
+.btn-top {
+    margin: 0 !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+    
+::-webkit-scrollbar-thumb {
+    background-color: #ffcc5c;
+    /* border-radius: 0 3px 3px 0; */
+}
