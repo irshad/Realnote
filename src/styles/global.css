@@ -1,6 +1,7 @@
 body {
     color: #212733;
     background-color: #ffffff;
+    font-family: PTSans-Regular;
 }
 
 .container {
@@ -18,4 +19,10 @@ body {
     
 ::-webkit-scrollbar-thumb {
     background-color: #ffcc5c;
+}
+
+/* font */
+@font-face {
+    font-family: PTSans-Regular;
+    src: url(../../fonts/PTSans-Regular.ttf);
 }

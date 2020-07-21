@@ -1,11 +1,12 @@
 /* textarea */
 textarea {
     width: 100%;
-    height: 92.7vh;
-    font-size: 16px;
+    height: 92.5vh;
+    font-size: 18px;
     border-radius: 5px;
     resize: none;
     border: solid 1px #ffcc5c;
+    font-family: PTSans-Regular;
 }
 
 textarea:focus {
@@ -15,9 +16,9 @@ textarea:focus {
 /* title */
 #title {
     float: right;
-    padding-right: 10px;
-    font-weight: 600;
     color: #212733;
+    padding-right: 10px;
+    font-family: PTSans-Bold;
     text-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
@@ -218,4 +219,15 @@ h4 {
         right: 35px;
         font-size: 40px;
     }
+}
+
+/* font */
+@font-face {
+    font-family: PTSans-Regular;
+    src: url(../../fonts/PTSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: PTSans-Bold;
+    src: url(../../fonts/PTSans-Bold.ttf);
 }
