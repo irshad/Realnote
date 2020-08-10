@@ -13,7 +13,7 @@ Realnote is simple single sheet note taking application that helps you to take n
 Just type your text and specify the file **Name** along with the desire file **Format** you want to download and that's it. Hit the download button and take your file. If you don't specify file format then you will get in **.txt** format
  
 ## What about your privacy policy?
-Simple — neither of us store any user data what so ever.
+Simple — Neither of us store any user data what so ever.
  
  ## Wishlist
  
