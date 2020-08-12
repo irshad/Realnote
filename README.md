@@ -1,4 +1,4 @@
-# Realnote
+# Realnote - Total users 6350
 
 [![Users](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/phonerefer/RuffNotes/blob/master/README.md) 
 [![RuffNotes](https://img.shields.io/badge/RuffNote-Visit-red)](https://realnote.ml "RuffNotes")
