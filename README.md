@@ -2,7 +2,7 @@
 
 [![Users](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/phonerefer/RuffNotes/blob/master/README.md) 
 [![RuffNotes](https://img.shields.io/badge/RuffNote-Visit-red)](https://realnote.ml "RuffNotes")
-[![Irshad](https://img.shields.io/badge/build--by-Irshad-black)](https://www.irshadali.site "Irshad Ali")
+[![Irshad](https://img.shields.io/badge/build--by-Irshad-purple)](https://www.irshadali.site "Irshad Ali")
 [![Users](https://img.shields.io/badge/Users-1650-blue)](https://ruff.netlify.com "Users")
 
 # What Is Realnote?
