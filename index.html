@@ -40,7 +40,6 @@
 
     <!----------------------------- Stylesheet ------------------------->
     <link rel="stylesheet" href="src/styles/app.css">
-    <link rel="stylesheet" href="src/styles/splashScreen.css">
     <link rel="stylesheet" href="src/styles/global.css">
 
     <!--------- Add to homescreen Fallback for manifest.json ----------->
@@ -77,12 +76,6 @@
 </head>
 
 <body>
-
-    <!-- splash screen -->
-    <div class="cover" id="splash">
-        <img src="https://res.cloudinary.com/phonerefer/image/upload/v1592054468/axnoqdnbu18p9lllrjtq.svg"
-            alt="Realnote Logo" id="icon">
-    </div>
 
     <div class="container">
         <textarea class="text" id="data" onkeyup="countChars('data','charcount');"
@@ -158,7 +151,7 @@
     </div>
 
     <script src="src/scripts/function.js"></script>
-    <script src="src/scripts/autosave.js"></script>
+    <!-- <script src="src/scripts/autosave.js"></script> -->
     <script src="src/scripts/install.js"></script>
 </body>
 

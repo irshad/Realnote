@@ -93,8 +93,3 @@ function clearStorage() {
          modal.style.display = "none";
      }
  }
-
- //  splash screen timeout
- setTimeout(function () {
-     document.getElementById('splash').style.display = 'none';
- }, 4000);
