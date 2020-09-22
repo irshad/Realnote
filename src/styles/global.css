@@ -21,13 +21,13 @@ body {
     background-color: #ffcc5c;
 }
 
-/* Code for Firefox */
+/* Text selection color */
 ::-moz-selection {
-  background: #ffc735;
+  background: #ffcc5c;
 }
 
 ::selection {
-  background: #ffc735;
+  background: #ffcc5c;
 }
 
 /* font */
