@@ -21,6 +21,15 @@ body {
     background-color: #ffcc5c;
 }
 
+/* Text selection color */
+::-moz-selection {
+  background: #ffcc5c;
+}
+
+::selection {
+  background: #ffcc5c;
+}
+
 /* font */
 @font-face {
     font-family: PTSans-Regular;
