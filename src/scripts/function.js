@@ -17,6 +17,8 @@ function clearStorage() {
     }
 }
 
+
+
  // Copy To Clipboard
  function copyClipboard() {
      let copyText = document.getElementById("data"); // Get the text field
