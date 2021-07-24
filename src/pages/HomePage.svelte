@@ -19,7 +19,7 @@
             saveButton = true;
             Toast.success("Text restored successfully");
         } else {
-            Toast.success("No save text to restored");
+            Toast.success("No saved text to restored");
         }
     });
 
