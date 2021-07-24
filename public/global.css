@@ -1,0 +1,65 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+:root {
+	--primary-color-black: #222121;
+	--primary-color-white: #ffffff;
+	--primary-color-yellow: #ffcc5c;
+	--primary-font-regular: 'WorkSans-Regular';
+	--primary-font-medium: 'WorkSans-Medium';
+	--primary-font-semibold: 'WorkSans-SemiBold';
+	--primary-font-bold: 'WorkSans-Bold';
+	--primary-font-extra-bold: 'WorkSans-ExtraBold';
+}
+
+@font-face {
+	font-family: 'WorkSans-Regular';
+	src: url('./font/WorkSans-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'WorkSans-Medium';
+	src: url('./font/WorkSans-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'WorkSans-SemiBold';
+	src: url('./font/WorkSans-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'WorkSans-Bold';
+	src: url('./font/WorkSans-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'WorkSans-ExtraBold';
+	src: url('./font/WorkSans-ExtraBold.ttf');
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color-yellow);
+}
+
+::-moz-selection {
+	background: var(--primary-color-yellow);
+}
+
+::selection {
+	background: var(--primary-color-yellow);
+}
+
+@media only screen and (max-width: 600px) {
+	.btn-title {
+		display: none;
+	}
+}
