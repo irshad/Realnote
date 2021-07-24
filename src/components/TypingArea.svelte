@@ -11,7 +11,7 @@
         margin: 10px 10px 0 10px;
         padding: 5px;
         border-radius: 10px;
-        border: 1px solid #ffcc5c;
+        border: 1px solid var(--primary-color-yellow);
     }
 
     :global(textarea) {

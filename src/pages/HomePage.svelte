@@ -4,36 +4,26 @@
     import Clear from "../components/svg/Clear.svelte";
     import Copy from "../components/svg/Copy.svelte";
     import Download from "../components/svg/Download.svelte";
-    import Save from "../components/svg/Save.svelte";
     import TypingArea from "../components/TypingArea.svelte";
     import Toast from "../stores/toast"
 
     let text = '';
-    let saveButton = true;
-    $:count=text.length;
-    
+    $:count = text.length;
+
     onMount(() => {
         if (localStorage.getItem("realnote")) {
-            let localData = localStorage.getItem("realnote");
-            document.getElementById("data").value = localData;
-            saveButton = true;
-            Toast.success("Text restored successfully");
-        } else {
-            Toast.success("No saved text to restored");
+            let localData = window.localStorage.getItem("realnote");
+            document.getElementById("data").value = atob(localData);
+            Toast.success("Session restored");
+            count = atob(localData).length;
         }
     });
 
-    $:if (localStorage.getItem("realnote")) {
-        saveButton = false;
-    } else {
-        saveButton = true;
-    }
-
     function clearStorage() {
         text = '';
+        count = 0;
         document.getElementById("data").value = '';
         window.localStorage.clear();
-        saveButton = true;
         Toast.error("Text cleared successfully");
     }
 
@@ -60,43 +50,26 @@
         Toast.success("File downloaded successfully");
     };
 
-    function save() {
-        localStorage.setItem("realnote", text);
-        saveButton = false;
-        Toast.success("Text saved successfully");
-    }
-    
-    function restore() {
-        let localData = localStorage.getItem("realnote");
-        document.getElementById("data").value = localData;
-        Toast.success("Text restored successfully");
+    function autosave() {
+        window.localStorage.setItem("realnote", btoa(text));
     }
 </script>
 
 <main>
     <TypingArea>
-        <textarea id="data" placeholder=" Type your text here..." bind:value={text}/>
+        <textarea id="data" placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
     </TypingArea>
 
     <Footer count={count}>
         <button on:click={clearStorage}>
             <Clear title="Clear"/>
         </button>
-        <button on:click={copyClipboard} disabled={!text}>
+        <button on:click={copyClipboard} disabled={!text.length > 0}>
             <Copy title="Copy"/>
         </button>
         <button on:click={downloadFile} disabled={!text}>
             <Download title="Download"/>
         </button>
-        {#if saveButton}
-            <button on:click={save} disabled={!text}>
-                <Save title="Save"/>
-            </button>
-        {:else}
-            <button on:click={restore}>
-                <Save title="Restore"/>
-            </button>
-        {/if}
     </Footer>
 </main>
 
