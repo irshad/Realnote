@@ -5,7 +5,9 @@ body {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-
+html, body {
+	height: 100%;
+}
 :root {
 	--primary-color-black: #222121;
 	--primary-color-white: #ffffff;

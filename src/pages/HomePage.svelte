@@ -14,16 +14,20 @@
         if (localStorage.getItem("realnote")) {
             let localData = window.localStorage.getItem("realnote");
             document.getElementById("data").value = atob(localData);
-            Toast.success("Session restored");
             count = atob(localData).length;
+            Toast.success("Session restored");
         }
     });
+
+    function autosave() {
+        window.localStorage.setItem("realnote", btoa(text));
+    }
 
     function clearStorage() {
         text = '';
         count = 0;
         document.getElementById("data").value = '';
-        window.localStorage.clear();
+        window.localStorage.removeItem("realnote");
         Toast.error("Text cleared successfully");
     }
 
@@ -49,36 +53,25 @@
         document.body.removeChild(element);
         Toast.success("File downloaded successfully");
     };
-
-    function autosave() {
-        window.localStorage.setItem("realnote", btoa(text));
-    }
 </script>
 
-<main>
-    <TypingArea>
-        <textarea id="data" placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
-    </TypingArea>
 
+<TypingArea>
+    <textarea id="data" placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
     <Footer count={count}>
         <button on:click={clearStorage}>
             <Clear title="Clear"/>
         </button>
-        <button on:click={copyClipboard} disabled={!text.length > 0}>
+        <button on:click={copyClipboard} disabled={!count > 0}>
             <Copy title="Copy"/>
         </button>
-        <button on:click={downloadFile} disabled={!text}>
+        <button on:click={downloadFile} disabled={!count > 0}>
             <Download title="Download"/>
         </button>
     </Footer>
-</main>
+</TypingArea>
 
 <style>
-    main {
-        display: grid;
-        gap: 6px;
-    }
-
     button {
         font-size: 14px;
         padding: 4px 10px;
@@ -94,6 +87,10 @@
 
     button:hover {
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    button:focus {
+        outline: none;
     }
 
     button[disabled] {
