@@ -9,7 +9,7 @@
 
     let text = '';
     $:count = text.length;
-
+    
     onMount(() => {
         if (localStorage.getItem("realnote")) {
             let localData = window.localStorage.getItem("realnote");
@@ -18,6 +18,10 @@
             count = atob(localData).length;
         }
     });
+    
+    function autosave() {
+        window.localStorage.setItem("realnote", btoa(text));
+    }
 
     function clearStorage() {
         text = '';
@@ -42,17 +46,13 @@
         });
         const fileUrl = URL.createObjectURL(blob);
         element.setAttribute('href', fileUrl);
-        element.setAttribute('download', 'filename');
+        element.setAttribute('download', 'realnote');
         element.style.display = 'none';
         document.body.appendChild(element);
         element.click();
         document.body.removeChild(element);
         Toast.success("File downloaded successfully");
     };
-
-    function autosave() {
-        window.localStorage.setItem("realnote", btoa(text));
-    }
 </script>
 
 <main>
