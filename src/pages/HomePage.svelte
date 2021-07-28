@@ -1,15 +1,16 @@
 <script>
     import { onMount } from "svelte";
+    import TypingArea from "../components/TypingArea.svelte";
     import Footer from "../components/Footer.svelte";
     import Clear from "../components/svg/Clear.svelte";
     import Copy from "../components/svg/Copy.svelte";
     import Download from "../components/svg/Download.svelte";
-    import TypingArea from "../components/TypingArea.svelte";
+    import Screenshot from "../components/svg/Screenshot.svelte";
     import Toast from "../stores/toast"
 
     let text = '';
     $:count = text.length;
-    
+
     onMount(() => {
         if (localStorage.getItem("realnote")) {
             let localData = window.localStorage.getItem("realnote");
@@ -53,22 +54,33 @@
         document.body.removeChild(element);
         Toast.success("File downloaded successfully");
     };
+
+    function screenShot() {
+        html2canvas(document.querySelector('.screenshot-area'), {
+            onrendered: function(canvas) {
+              return Canvas2Image.saveAsPNG(canvas);
+            }
+        });
+    }
 </script>
 
 <main>
-    <TypingArea>
-        <textarea id="data" placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
+    <TypingArea cssClass="screenshot-area">
+        <textarea class="" id="data" placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
     </TypingArea>
 
     <Footer count={count}>
         <button on:click={clearStorage}>
             <Clear title="Clear"/>
         </button>
-        <button on:click={copyClipboard} disabled={!text.length > 0}>
+        <button on:click={copyClipboard} disabled={!text}>
             <Copy title="Copy"/>
         </button>
         <button on:click={downloadFile} disabled={!text}>
             <Download title="Download"/>
+        </button>
+        <button on:click={screenShot} disabled={!text}>
+            <Screenshot title="Screenshot"/>
         </button>
     </Footer>
 </main>
@@ -76,7 +88,7 @@
 <style>
     main {
         display: grid;
-        gap: 6px;
+        gap: 5px;
     }
 
     button {

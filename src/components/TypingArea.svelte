@@ -1,16 +1,18 @@
 <script>
-
+    export let cssClass = '';
 </script>
 
-<div class="textarea">
+<div class="textarea {cssClass}">
     <slot />
 </div>
 
 <style>
     .textarea {
-        margin: 10px 10px 0 10px;
         padding: 5px;
+        margin: 10px 10px 0 10px;
+        overflow: hidden;
         border-radius: 10px;
+        background-color: var(--primary-color-white);
         border: 1px solid var(--primary-color-yellow);
     }
 
@@ -24,6 +26,7 @@
         border-width: 0;
         color: var(--primary-color-black);
         font-family: var(--primary-font-regular);
+        background-color: var(--primary-color-white);
     }
 
     :global(textarea:focus) {
