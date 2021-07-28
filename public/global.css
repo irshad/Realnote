@@ -4,6 +4,7 @@ body {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 @font-face {
@@ -16,30 +17,12 @@ body {
 	src: url('./font/WorkSans-Medium.ttf');
 }
 
-@font-face {
-	font-family: 'WorkSans-SemiBold';
-	src: url('./font/WorkSans-SemiBold.ttf');
-}
-
-@font-face {
-	font-family: 'WorkSans-Bold';
-	src: url('./font/WorkSans-Bold.ttf');
-}
-
-@font-face {
-	font-family: 'WorkSans-ExtraBold';
-	src: url('./font/WorkSans-ExtraBold.ttf');
-}
-
 :root {
 	--primary-color-black: #222121;
 	--primary-color-white: #ffffff;
 	--primary-color-yellow: #ffcc5c;
 	--primary-font-regular: 'WorkSans-Regular';
 	--primary-font-medium: 'WorkSans-Medium';
-	--primary-font-semibold: 'WorkSans-SemiBold';
-	--primary-font-bold: 'WorkSans-Bold';
-	--primary-font-extra-bold: 'WorkSans-ExtraBold';
 }
 
 ::-webkit-scrollbar {
