@@ -25,19 +25,15 @@
         font-family: var(--primary-font-medium);
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	}
-
-    img {
-        margin-bottom: -2px;
-    }
 </style>
 
 <div class="toast-wrapper">
 	{#if $ToastStore.show}
-	<div class="toast-item {$ToastStore.type}"
-		style="background-color: {$ToastStore.color}; color:{$ToastStore.textColor}" 
-		in:fly="{{delay: 0, duration: 300, x: 0, y: 50, opacity: 0.1, easing: backOut}}" 
-		out:fade={{duration:200, opacity: 0}}>
-		<img src="../../images/{$ToastStore.icon}.svg" alt=""> {$ToastStore.message}
-	</div>
+		<div class="toast-item {$ToastStore.type}"
+			style="background-color: {$ToastStore.color}; color:{$ToastStore.textColor}" 
+			in:fly="{{delay: 0, duration: 300, x: 0, y: 50, opacity: 0.1, easing: backOut}}" 
+			out:fade={{duration:200, opacity: 0}}>
+			{$ToastStore.message}
+		</div>
 	{/if}
 </div>

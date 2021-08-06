@@ -22,8 +22,7 @@ const createToastStore = () => {
                 type: TOAST_TYPES.SUCCESS,
                 message: msg,
                 textColor: '#222121',
-                color:"#ffcc5c",
-                icon: 'check'
+                color:"#ffcc5c"
             }))
         },
         error: msg => {
@@ -33,8 +32,7 @@ const createToastStore = () => {
                 type: TOAST_TYPES.ERROR,
                 message: msg,
                 textColor: '#222121',
-                color:"#ffcc5c",
-                icon: 'trash'
+                color:"#ffcc5c"
             }))
         },
         hide: () => {
