@@ -66,7 +66,7 @@
 
 <main>
     <TypingArea cssClass="screenshot-area">
-        <textarea class="" id="data" placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
+        <textarea class="" id="data" autofocus placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
     </TypingArea>
 
     <Footer count={count}>
