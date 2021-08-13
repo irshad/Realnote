@@ -7,6 +7,7 @@
     import Download from "../components/svg/Download.svelte";
     import Screenshot from "../components/svg/Screenshot.svelte";
     import Toast from "../stores/toast"
+    import Flag from "../components/Flag.svelte";
 
     let text = '';
     $:count = text.length;
@@ -83,6 +84,8 @@
             <Screenshot title="Screenshot"/>
         </button>
     </Footer>
+
+    <Flag/>
 </main>
 
 <style>
