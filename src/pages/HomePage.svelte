@@ -147,5 +147,9 @@
                 color: var(--primary-color-yellow) !important;
             }
         </style>
+
+	    <meta name="theme-color" content="#222121">
+    {:else}
+        <meta name="theme-color" content="#ffcc5c">
     {/if}
 </svelte:head>
