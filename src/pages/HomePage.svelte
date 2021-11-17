@@ -23,6 +23,8 @@
             Toast.success("Session restored");
             count = atob(localData).length;
         }
+
+        theme = JSON.parse(localStorage.getItem("darkmode")) == true ? true : false;
     });
     
     function autosave() {
@@ -70,6 +72,7 @@
 
     function darkMode() {
         theme = !theme;
+        localStorage.setItem("darkmode", theme);
     }
 </script>
 
@@ -100,7 +103,7 @@
         </button>
     </Footer>
 
-    <Flag/>
+    <!-- <Flag/> -->
 </main>
 
 <style>
