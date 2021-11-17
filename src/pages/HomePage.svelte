@@ -8,7 +8,11 @@
     import Screenshot from "../components/svg/Screenshot.svelte";
     import Toast from "../stores/toast"
     import Flag from "../components/Flag.svelte";
+    import Moon from "../components/svg/Moon.svelte";
+    import Sun from "../components/svg/Sun.svelte";
 
+
+    let theme = true;
     let text = '';
     $:count = text.length;
 
@@ -63,6 +67,10 @@
             }
         });
     }
+
+    function darkMode() {
+        theme = !theme;
+    }
 </script>
 
 <main>
@@ -82,6 +90,13 @@
         </button>
         <button on:click={screenShot} disabled={!text}>
             <Screenshot title="Screenshot"/>
+        </button>
+        <button on:click={darkMode}>
+            {#if theme}
+                <Moon/>
+            {:else}
+                <Sun/>
+            {/if}
         </button>
     </Footer>
 
@@ -116,3 +131,18 @@
         color: var(--primary-color-black);
     }
 </style>
+
+<svelte:head>
+    {#if !theme}
+        <style>
+            body, textarea, .textarea {
+                background-color: var(--primary-color-black) !important;
+                color: var(--primary-color-yellow) !important;
+            }
+
+            .charater-count {
+                color: var(--primary-color-yellow) !important;
+            }
+        </style>
+    {/if}
+</svelte:head>
