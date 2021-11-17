@@ -17,8 +17,8 @@
     $:count = text.length;
 
     onMount(() => {
-        if (localStorage.getItem("realnote")) {
-            let localData = window.localStorage.getItem("realnote");
+        let localData = window.localStorage.getItem("realnote");
+        if (localData) {
             document.getElementById("data").value = atob(localData);
             Toast.success("Session restored");
             count = atob(localData).length;
