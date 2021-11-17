@@ -12,7 +12,7 @@
     import Sun from "../components/svg/Sun.svelte";
 
 
-    let theme = true;
+    let theme = false;
     let text = '';
     $:count = text.length;
 
@@ -35,7 +35,7 @@
         text = '';
         count = 0;
         document.getElementById("data").value = '';
-        window.localStorage.clear();
+        window.localStorage.removeItem("realnote");
         Toast.error("Text cleared successfully");
     }
 
@@ -96,9 +96,9 @@
         </button>
         <button on:click={darkMode}>
             {#if theme}
-                <Moon/>
-            {:else}
                 <Sun/>
+            {:else}
+                <Moon/>
             {/if}
         </button>
     </Footer>
@@ -136,7 +136,7 @@
 </style>
 
 <svelte:head>
-    {#if !theme}
+    {#if theme}
         <style>
             body, textarea, .textarea {
                 background-color: var(--primary-color-black) !important;
