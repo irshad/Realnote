@@ -146,6 +146,11 @@
             .charater-count {
                 color: var(--primary-color-yellow) !important;
             }
+
+            ::selection {
+                background: var(--primary-color-yellow) !important;
+                color: var(--primary-color-black) !important;
+            }
         </style>
 
 	    <meta name="theme-color" content="#222121">
