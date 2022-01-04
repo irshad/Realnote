@@ -25,6 +25,10 @@
         }
 
         theme = JSON.parse(localStorage.getItem("darkmode")) == true ? true : false;
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches || theme) {
+            theme = true;
+        }
     });
     
     function autosave() {
