@@ -51,5 +51,6 @@ html, body {
 	.title svg {
 		width: 26px;
 		height: 26px;
+		filter: drop-shadow(0px 1px 2px #00000052);
 	}
 }
