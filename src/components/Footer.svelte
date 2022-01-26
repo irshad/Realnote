@@ -17,6 +17,7 @@
 
 <style>
     .footer {
+        height: 40px;
         margin: 0 10px;
         user-select: none;
         display: flex;

@@ -107,13 +107,13 @@
         </button>
     </Footer>
 
-    <!-- <Flag/> -->
+    <Flag/>
 </main>
 
 <style>
     main {
-        display: grid;
-        gap: 5px;
+        height: 100%;
+        width: 100%;
     }
 
     button {
