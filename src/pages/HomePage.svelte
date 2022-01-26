@@ -107,7 +107,7 @@
         </button>
     </Footer>
 
-    <Flag/>
+    <!-- <Flag/> -->
 </main>
 
 <style>

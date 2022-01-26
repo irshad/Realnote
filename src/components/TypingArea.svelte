@@ -9,15 +9,14 @@
 <style>
     .textarea {
         background-color: var(--primary-color-white);
-        height: calc(100% - 44px); /* - 40 */
-        width: 100%;
+        height: calc(100% - 44px);
     }
 
     :global(textarea) {
-        margin: 10px; /* 0 */
+        margin: 10px;
         padding: 6px;
         width: calc(100% - 34px);
-        height: calc(100% - 26px); /* -24*/
+        height: calc(100% - 26px);
         resize: none;
         font-size: 18px;
         border-radius: 10px;
@@ -25,7 +24,6 @@
         font-family: var(--primary-font-regular);
         background-color: var(--primary-color-white);
         border-color: var(--primary-color-yellow);
-         /* margin: 10px 10px 0 10px; */
     }
 
     :global(textarea:focus) {
