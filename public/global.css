@@ -44,11 +44,12 @@ html, body {
 }
 
 @media only screen and (max-width: 600px) {
-	.btn-title {
-		display: none;
+	.btn-title, .mobile-title {
+		display: none !important;
 	}
-}
 
-@media (min-width: 1920px) and (max-width: 2560px)  {
-    .textarea { height: 93.4vh; }
+	.title svg {
+		width: 26px;
+		height: 26px;
+	}
 }
