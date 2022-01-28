@@ -9,14 +9,14 @@
 <style>
     .textarea {
         background-color: var(--primary-color-white);
-        height: calc(100% - 44px);
+        height: calc(100% - 56px);
+        padding: 10px;
     }
 
     :global(textarea) {
-        margin: 10px;
         padding: 6px;
-        width: calc(100% - 34px);
-        height: calc(100% - 26px);
+        width: calc(100% - 14px);
+        height: calc(100% - 14px);
         resize: none;
         font-size: 18px;
         border-radius: 10px;

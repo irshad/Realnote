@@ -17,8 +17,8 @@
 
 <style>
     .footer {
-        height: 40px;
-        margin: 0 10px 10px 10px;
+        height: 26px;
+        padding: 0 10px 10px 10px;
         user-select: none;
         display: flex;
         align-items: center;

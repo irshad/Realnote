@@ -11,9 +11,9 @@
     import Moon from "../components/svg/Moon.svelte";
     import Sun from "../components/svg/Sun.svelte";
 
-
     let theme = false;
     let text = '';
+    let disabled = true;
     $:count = text.length;
 
     onMount(() => {
@@ -22,12 +22,17 @@
             document.getElementById("data").value = atob(localData);
             Toast.success("Session restored");
             count = atob(localData).length;
+            disabled = false;
         }
 
         theme = JSON.parse(localStorage.getItem("darkmode")) == true ? true : false;
 
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches || theme) {
             theme = true;
+        }
+
+        if(text.length > 0) {
+            disabled = false;
         }
     });
     
@@ -41,6 +46,7 @@
         document.getElementById("data").value = '';
         window.localStorage.removeItem("realnote");
         Toast.error("Text cleared successfully");
+        disabled = true
     }
 
     function copyClipboard() {
@@ -78,6 +84,8 @@
         theme = !theme;
         localStorage.setItem("darkmode", theme);
     }
+
+    $:text.length > 0 ? disabled = false : disabled = true;
 </script>
 
 <main>
@@ -89,13 +97,13 @@
         <button on:click={clearStorage}>
             <Clear title="Clear"/>
         </button>
-        <button on:click={copyClipboard} disabled={!text}>
+        <button on:click={copyClipboard} disabled={disabled}>
             <Copy title="Copy"/>
         </button>
-        <button on:click={downloadFile} disabled={!text}>
+        <button on:click={downloadFile} disabled={disabled}>
             <Download title="Download"/>
         </button>
-        <button on:click={screenShot} disabled={!text}>
+        <button on:click={screenShot} disabled={disabled}>
             <Screenshot title="Screenshot"/>
         </button>
         <button on:click={darkMode}>
