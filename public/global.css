@@ -51,6 +51,23 @@ html, body {
 	.title svg {
 		width: 28px;
 		height: 28px;
-		/* filter: drop-shadow(0px 1px 2px #00000052); */
+	}
+
+	/* Mobile App*/
+	.footer {
+		display: none !important;
+	}
+
+	.textarea {
+        height: calc(100% - 22px) !important;
+	}
+
+	textarea {
+        height: calc(100% - 17px) !important;
+		width: calc(100% - 17px) !important;
+	}
+
+	.floating-button-menu {
+		visibility: visible !important;
 	}
 }

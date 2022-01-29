@@ -10,6 +10,7 @@
     import Flag from "../components/Flag.svelte";
     import Moon from "../components/svg/Moon.svelte";
     import Sun from "../components/svg/Sun.svelte";
+    import FloatButton from "../components/FloatButton.svelte";
 
     let theme = false;
     let text = '';
@@ -94,19 +95,19 @@
     </TypingArea>
 
     <Footer count={count}>
-        <button on:click={clearStorage}>
+        <button class="web-button" on:click={clearStorage}>
             <Clear title="Clear"/>
         </button>
-        <button on:click={copyClipboard} disabled={disabled}>
+        <button class="web-button" on:click={copyClipboard} disabled={disabled}>
             <Copy title="Copy"/>
         </button>
-        <button on:click={downloadFile} disabled={disabled}>
+        <button class="web-button" on:click={downloadFile} disabled={disabled}>
             <Download title="Download"/>
         </button>
-        <button on:click={screenShot} disabled={disabled}>
+        <button class="web-button" on:click={screenShot} disabled={disabled}>
             <Screenshot title="Screenshot"/>
         </button>
-        <button on:click={darkMode}>
+        <button class="web-button" on:click={darkMode}>
             {#if theme}
                 <Sun/>
             {:else}
@@ -115,6 +116,27 @@
         </button>
     </Footer>
 
+    <FloatButton>
+        <button class="mobile-button" on:click={clearStorage}>
+            <Clear title="Clear"/>
+        </button>
+        <button class="mobile-button" on:click={copyClipboard} disabled={disabled}>
+            <Copy title="Copy"/>
+        </button>
+        <button class="mobile-button" on:click={downloadFile} disabled={disabled}>
+            <Download title="Download"/>
+        </button>
+        <button class="mobile-button" on:click={screenShot} disabled={disabled}>
+            <Screenshot title="Screenshot"/>
+        </button>
+        <button class="mobile-button" on:click={darkMode}>
+            {#if theme}
+                <Sun/>
+            {:else}
+                <Moon/>
+            {/if}
+        </button>
+    </FloatButton>
     <!-- <Flag/> -->
 </main>
 
@@ -124,7 +146,7 @@
         width: 100%;
     }
 
-    button {
+    .web-button, .mobile-button {
         font-size: 14px;
         padding: 4px 10px;
         cursor: pointer;
@@ -137,11 +159,11 @@
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     }
 
-    button:hover {
+    .web-button:hover {
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     }
 
-    button[disabled] {
+    .web-button[disabled] {
         pointer-events: none;
         color: var(--primary-color-black);
     }
