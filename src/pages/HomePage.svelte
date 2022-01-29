@@ -165,7 +165,7 @@
             }
         </style>
 
-	    <meta name="theme-color" content="#222121">
+	    <meta name="theme-color" content="#c9e943">
     {:else}
         <meta name="theme-color" content="#c9e943">
     {/if}
