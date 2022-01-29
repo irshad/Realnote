@@ -169,7 +169,7 @@
     }
 
     .mobile-button {
-        box-shadow: none;
+        /* box-shadow: none; */
     }
 </style>
 
