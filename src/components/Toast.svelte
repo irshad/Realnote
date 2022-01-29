@@ -9,7 +9,7 @@
 		position: fixed;
 		left: 0;
 		right: 0;
-		bottom: 10%;
+		bottom: 14%;
 		text-align: center;
 		z-index: 9999;
 	}
