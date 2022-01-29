@@ -5,7 +5,7 @@
 
 <div class="footer">
     <div class="btn-section">
-        <div style="display: flex;">
+        <div style="display: flex; font-weight: 600;">
             <div class="charater-count-bracket">[</div>
             <div class="charater-count">{count}</div>
             <div class="charater-count-bracket">]</div>
@@ -34,7 +34,7 @@
     }
 
     .charater-count-bracket {
-        color: var(--primary-color-yellow);
+        color: var(--primary-color-theme);
         font-family: var(--primary-font-regular);
     }
 

@@ -15,15 +15,16 @@
 
     :global(textarea) {
         padding: 6px;
-        width: calc(100% - 14px);
-        height: calc(100% - 14px);
+        width: calc(100% - 17px);
+        height: calc(100% - 17px);
         resize: none;
         font-size: 18px;
         border-radius: 10px;
         color: var(--primary-color-black);
         font-family: var(--primary-font-regular);
         background-color: var(--primary-color-white);
-        border-color: var(--primary-color-yellow);
+        border-color: var(--primary-color-theme);
+        border-width: 3px;
     }
 
     :global(textarea:focus) {

@@ -20,9 +20,9 @@ html, body {
 }
 
 :root {
-	--primary-color-black: #222121;
+	--primary-color-black: #000000;
 	--primary-color-white: #ffffff;
-	--primary-color-yellow: #ffcc5c;
+	--primary-color-theme: #c9e943;
 	--primary-font-regular: 'WorkSans-Regular';
 	--primary-font-medium: 'WorkSans-Medium';
 }
@@ -32,15 +32,15 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--primary-color-yellow);
+	background-color: var(--primary-color-theme);
 }
 
 ::-moz-selection {
-	background: var(--primary-color-yellow);
+	background: var(--primary-color-theme);
 }
 
 ::selection {
-	background: var(--primary-color-yellow);
+	background: var(--primary-color-theme);
 }
 
 @media only screen and (max-width: 600px) {

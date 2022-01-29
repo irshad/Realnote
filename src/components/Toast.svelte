@@ -23,15 +23,15 @@
 		width: fit-content;
 		font-size: 16px;
         font-family: var(--primary-font-medium);
+		color: var(--primary-color-black);
+		background-color: var(--primary-color-theme); 
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	}
 </style>
 
 <div class="toast-wrapper">
 	{#if $ToastStore.show}
-		<div class="toast-item {$ToastStore.type}"
-			style="background-color: {$ToastStore.color}; color:{$ToastStore.textColor}" 
-			in:fly="{{delay: 0, duration: 300, x: 0, y: 50, opacity: 0.1, easing: backOut}}" 
+		<div class="toast-item {$ToastStore.type}" in:fly="{{delay: 0, duration: 300, x: 0, y: 50, opacity: 0.1, easing: backOut}}" 
 			out:fade={{duration:200, opacity: 0}}>
 			{$ToastStore.message}
 		</div>

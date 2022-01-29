@@ -20,9 +20,7 @@ const createToastStore = () => {
                 ...u,
                 show: true,
                 type: TOAST_TYPES.SUCCESS,
-                message: msg,
-                textColor: '#222121',
-                color:"#ffcc5c"
+                message: msg
             }))
         },
         error: msg => {
@@ -30,9 +28,7 @@ const createToastStore = () => {
                 ...u,
                 show: true,
                 type: TOAST_TYPES.ERROR,
-                message: msg,
-                textColor: '#222121',
-                color:"#ffcc5c"
+                message: msg
             }))
         },
         hide: () => {
