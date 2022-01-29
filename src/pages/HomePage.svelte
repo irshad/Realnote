@@ -167,10 +167,6 @@
         pointer-events: none;
         color: var(--primary-color-black);
     }
-
-    .mobile-button {
-        /* box-shadow: none; */
-    }
 </style>
 
 <svelte:head>

@@ -70,4 +70,8 @@ html, body {
 	.floating-button-menu {
 		visibility: visible !important;
 	}
+
+	.mobile-button, .toast-item {
+		box-shadow: none !important;
+	}
 }
