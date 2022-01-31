@@ -193,6 +193,10 @@
                 background: var(--primary-color-theme) !important;
                 color: var(--primary-color-black) !important;
             }
+
+            .count-section {
+                color: var(--primary-color-theme) !important;
+            }
         </style>
 
 	    <meta name="theme-color" content="#c9e943">
