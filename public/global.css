@@ -85,8 +85,8 @@ html, body {
 	.count-section {
 		display: block !important;
 		position: absolute;
-		bottom: 40px;
-		left: 25px;
+		bottom: 24px;
+		left: 24px;
         color: var(--primary-color-black);
         font-family: var(--primary-font-medium);
 	}
