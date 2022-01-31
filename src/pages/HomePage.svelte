@@ -139,7 +139,7 @@
     </FloatButton>
     <!-- <Flag/> -->
 
-    <div class="count-section">
+    <div class="mobile-charater-count">
         {count}
     </div>
 </main>
@@ -171,10 +171,6 @@
         pointer-events: none;
         color: var(--primary-color-black);
     }
-
-    .count-section {
-        display: none;
-    }
 </style>
 
 <svelte:head>
@@ -185,17 +181,13 @@
                 color: var(--primary-color-theme) !important;
             }
 
-            .charater-count {
+            .charater-count, .mobile-charater-count {
                 color: var(--primary-color-theme) !important;
             }
 
             ::selection {
                 background: var(--primary-color-theme) !important;
                 color: var(--primary-color-black) !important;
-            }
-
-            .count-section {
-                color: var(--primary-color-theme) !important;
             }
         </style>
 

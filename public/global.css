@@ -50,18 +50,13 @@ html, body {
 }
 
 @media only screen and (max-width: 600px) {
-	.btn-title, .mobile-title {
+	.btn-title, .mobile-title, .footer {
 		display: none !important;
 	}
 
 	.title svg {
 		width: 28px;
 		height: 28px;
-	}
-
-	/* Mobile App*/
-	.footer {
-		display: none !important;
 	}
 
 	.textarea {
@@ -82,11 +77,11 @@ html, body {
 		box-shadow: none !important;
 	}
 
-	.count-section {
+	.mobile-charater-count {
 		display: block !important;
-		position: absolute;
-		bottom: 24px;
 		left: 24px;
+		bottom: 24px;
+		position: absolute;
         color: var(--primary-color-black);
         font-family: var(--primary-font-medium);
 	}
