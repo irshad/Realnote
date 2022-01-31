@@ -65,7 +65,7 @@ html, body {
 	textarea {
         height: calc(100% - 17px) !important;
 		width: calc(100% - 17px) !important;
-		border-radius: 20px;
+		border-radius: 20px !important;
 	}
 
 	.floating-button-menu {
