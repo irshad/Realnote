@@ -117,19 +117,19 @@
     </Footer>
 
     <FloatButton>
-        <button class="mobile-button" on:click={clearStorage}>
+        <button class="mobile-button mobile-button-1" on:click={clearStorage}>
             <Clear title="Clear"/>
         </button>
-        <button class="mobile-button" on:click={copyClipboard} disabled={disabled}>
+        <button class="mobile-button mobile-button-2" on:click={copyClipboard} disabled={disabled}>
             <Copy title="Copy"/>
         </button>
-        <button class="mobile-button" on:click={downloadFile} disabled={disabled}>
+        <button class="mobile-button mobile-button-3" on:click={downloadFile} disabled={disabled}>
             <Download title="Download"/>
         </button>
-        <button class="mobile-button" on:click={screenShot} disabled={disabled}>
+        <button class="mobile-button mobile-button-4" on:click={screenShot} disabled={disabled}>
             <Screenshot title="Screenshot"/>
         </button>
-        <button class="mobile-button" on:click={darkMode}>
+        <button class="mobile-button mobile-button-5" on:click={darkMode}>
             {#if theme}
                 <Sun/>
             {:else}
@@ -138,6 +138,10 @@
         </button>
     </FloatButton>
     <!-- <Flag/> -->
+
+    <div class="count-section">
+        {count}
+    </div>
 </main>
 
 <style>
@@ -166,6 +170,10 @@
     .web-button[disabled] {
         pointer-events: none;
         color: var(--primary-color-black);
+    }
+
+    .count-section {
+        display: none;
     }
 </style>
 

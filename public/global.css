@@ -22,7 +22,13 @@ html, body {
 :root {
 	--primary-color-black: #000000;
 	--primary-color-white: #ffffff;
+	--primary-color-gray: #999999;
 	--primary-color-theme: #c9e943;
+	--primary-color-orange:#fa9e35;
+	--primary-color-pink: #fb7da7;
+	--primary-color-purpel: #af98e6;
+	--primary-color-yellow: #ffd33f;
+	--primary-color-blue: #51c7da;
 	--primary-font-regular: 'WorkSans-Regular';
 	--primary-font-medium: 'WorkSans-Medium';
 }
@@ -75,4 +81,19 @@ html, body {
 	.mobile-button, .toast-item {
 		box-shadow: none !important;
 	}
+
+	.count-section {
+		display: block !important;
+		position: absolute;
+		bottom: 25px;
+		left: 25px;
+        color: var(--primary-color-black);
+        font-family: var(--primary-font-medium);
+	}
+
+	.mobile-button-1 { background-color: var(--primary-color-pink) !important; }
+	.mobile-button-2 { background-color: var(--primary-color-purpel) !important; }
+	.mobile-button-3 { background-color: var(--primary-color-theme) !important; }
+	.mobile-button-4 { background-color: var(--primary-color-yellow) !important; }
+	.mobile-button-5 { background-color: var(--primary-color-blue) !important; }
 }
