@@ -171,6 +171,10 @@
         pointer-events: none;
         color: var(--primary-color-black);
     }
+
+    .mobile-charater-count {
+        display: none;
+    }
 </style>
 
 <svelte:head>
