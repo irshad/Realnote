@@ -114,7 +114,7 @@
                 url: 'https://realnote.ml',
             });
         } catch (error) {
-            alert(error);
+            Toast.success("Share cancelled");
         }
     }
 
