@@ -17,6 +17,7 @@
     let theme = false;
     let text = '';
     let disabled = true;
+    let menu;
     $:count = text.length;
 
     onMount(() => {
@@ -114,6 +115,7 @@
                 url: 'https://realnote.ml',
             });
         } catch (error) {
+            menu=!menu;
             Toast.success("Share cancelled");
         }
     }
@@ -148,7 +150,7 @@
         </button>
     </Footer>
 
-    <FloatButton>
+    <FloatButton bind:menu>
         <button class="mobile-button mobile-button-1" on:click={clearStorage}>
             <Clear title="Clear"/>
         </button>
