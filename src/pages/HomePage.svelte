@@ -11,6 +11,8 @@
     import Moon from "../components/svg/Moon.svelte";
     import Sun from "../components/svg/Sun.svelte";
     import FloatButton from "../components/FloatButton.svelte";
+    import Share from "../components/svg/Share.svelte";
+    import { hapticFeedback } from "../utils/vibrate";
 
     let theme = false;
     let text = '';
@@ -36,10 +38,6 @@
             disabled = false;
         }
     });
-
-    function vibratePhone() {
-        navigator.vibrate(10);
-    }
     
     function autosave() {
         window.localStorage.setItem("realnote", btoa(text));
@@ -47,7 +45,7 @@
 
     function clearStorage() {
         // vibrate phone
-        vibratePhone();
+        hapticFeedback.vibratePhone();
 
         text = '';
         count = 0;
@@ -59,7 +57,7 @@
 
     function copyClipboard() {
         // vibrate phone
-        vibratePhone();
+        hapticFeedback.vibratePhone();
 
         let copyText = document.getElementById("data");
         copyText.select();
@@ -70,7 +68,7 @@
 
     function downloadFile() {
         // vibrate phone
-        vibratePhone();
+        hapticFeedback.vibratePhone();
 
         const element = document.createElement('a');
         const blob = new Blob([text], {
@@ -88,7 +86,7 @@
 
     function screenShot() {
         // vibrate phone
-        vibratePhone();
+        hapticFeedback.vibratePhone();
 
         html2canvas(document.querySelector('.screenshot-area'), {
             onrendered: function(canvas) {
@@ -99,10 +97,25 @@
 
     function darkMode() {
         // vibrate phone
-        vibratePhone();
+        hapticFeedback.vibratePhone();
 
         theme = !theme;
         localStorage.setItem("darkmode", theme);
+    }
+
+    async function share() {
+        // vibrate phone
+        hapticFeedback.vibratePhone();
+        
+        try {            
+            await navigator.share({
+                title: 'Realnote - A minimalist note taking app.',
+                text: 'Realnote is a simple single sheet note taking application that helps you to take notes on go. You can download your notes as text file or you can download your notes as image',
+                url: 'https://realnote.ml',
+            });
+        } catch (error) {
+            alert(error);
+        }
     }
 
     $:text.length > 0 ? disabled = false : disabled = true;
@@ -154,6 +167,10 @@
             {:else}
                 <Moon/>
             {/if}
+        </button>
+
+        <button class="mobile-button mobile-button-5" slot="share" on:click={share}>
+            <Share />
         </button>
     </FloatButton>
     <!-- <Flag/> -->

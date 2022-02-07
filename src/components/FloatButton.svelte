@@ -1,10 +1,17 @@
 <script>
     import { fade } from "svelte/transition";
+    import { hapticFeedback } from "../utils/vibrate";
+
     export let menu = false;
+
+    function openMenu() {
+        hapticFeedback.vibratePhone();
+        menu = !menu;
+    }
 </script>
 
 <div class="floating-button-menu">
-    <div class="floating-button" on:click={() => menu = !menu}>
+    <div class="floating-button" on:click={openMenu}>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-left">
             <line x1="17" y1="10" x2="3" y2="10"></line>
             <line x1="21" y1="6" x2="3" y2="6"></line>
@@ -14,6 +21,9 @@
     </div>
     
     {#if menu}
+        <div class="share-button" transition:fade={{ duration: 200 }}>
+            <slot name="share" />
+        </div>
         <div class="floating-button-list" transition:fade={{ duration: 200 }}>
             <slot />
         </div>
@@ -46,5 +56,11 @@
         gap: 14px;
         display: flex;
         align-items: center;
+    }
+
+    .share-button {
+        position: absolute;
+        bottom: 74px;
+        right: 74px;
     }
 </style>
