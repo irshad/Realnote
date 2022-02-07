@@ -36,12 +36,19 @@
             disabled = false;
         }
     });
+
+    function vibratePhone() {
+        navigator.vibrate(10);
+    }
     
     function autosave() {
         window.localStorage.setItem("realnote", btoa(text));
     }
 
     function clearStorage() {
+        // vibrate phone
+        vibratePhone();
+
         text = '';
         count = 0;
         document.getElementById("data").value = '';
@@ -51,6 +58,9 @@
     }
 
     function copyClipboard() {
+        // vibrate phone
+        vibratePhone();
+
         let copyText = document.getElementById("data");
         copyText.select();
         copyText.setSelectionRange(0, 99999);
@@ -59,6 +69,9 @@
     }
 
     function downloadFile() {
+        // vibrate phone
+        vibratePhone();
+
         const element = document.createElement('a');
         const blob = new Blob([text], {
             type: '.txt'
@@ -74,6 +87,9 @@
     };
 
     function screenShot() {
+        // vibrate phone
+        vibratePhone();
+
         html2canvas(document.querySelector('.screenshot-area'), {
             onrendered: function(canvas) {
               return Canvas2Image.saveAsPNG(canvas);
@@ -82,6 +98,9 @@
     }
 
     function darkMode() {
+        // vibrate phone
+        vibratePhone();
+
         theme = !theme;
         localStorage.setItem("darkmode", theme);
     }
