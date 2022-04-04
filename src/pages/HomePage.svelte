@@ -12,12 +12,16 @@
     import Sun from "../components/svg/Sun.svelte";
     import FloatButton from "../components/FloatButton.svelte";
     import Share from "../components/svg/Share.svelte";
+    import File from "../components/svg/File.svelte";
     import { hapticFeedback } from "../utils/vibrate";
+    import Save from "../components/svg/Save.svelte";
 
     let theme = false;
     let text = '';
     let disabled = true;
     let menu;
+    let fileHandle;
+    let saveFile = false;
     $:count = text.length;
 
     onMount(() => {
@@ -53,7 +57,8 @@
         document.getElementById("data").value = '';
         window.localStorage.removeItem("realnote");
         Toast.error("Text cleared successfully");
-        disabled = true
+        disabled = true;
+        saveFile = false;
     }
 
     function copyClipboard() {
@@ -120,11 +125,35 @@
         }
     }
 
+    async function openFile() {
+        // vibrate phone
+        hapticFeedback.vibratePhone();
+
+        // open file picker
+        [fileHandle] = await window.showOpenFilePicker();
+        // get file contents
+        const fileData = await fileHandle.getFile();
+        text = await fileData.text();
+        saveFile = true;
+        Toast.success("File opened successfully");
+    }
+
+    async function writeFile() {
+        // vibrate phone
+        hapticFeedback.vibratePhone();
+
+        const writable = await fileHandle.createWritable();
+        await writable.write(text);
+        await writable.close();
+        Toast.success("File saved successfully");
+    }
+
     $:text.length > 0 ? disabled = false : disabled = true;
 </script>
 
 <main>
     <TypingArea cssClass="screenshot-area">
+        <!-- svelte-ignore a11y-autofocus -->
         <textarea class="" id="data" autofocus placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
     </TypingArea>
 
@@ -141,6 +170,14 @@
         <button class="web-button" on:click={screenShot} disabled={disabled}>
             <Screenshot title="Screenshot"/>
         </button>
+        <button class="web-button" on:click={openFile}>
+            <File title="Open File"/>
+        </button>
+        {#if saveFile}        
+            <button class="web-button" on:click={writeFile}>
+                <Save title="Save File"/>
+            </button>
+        {/if}
         <button class="web-button" on:click={darkMode}>
             {#if theme}
                 <Sun/>
@@ -163,14 +200,19 @@
         <button class="mobile-button mobile-button-4" on:click={screenShot} disabled={disabled}>
             <Screenshot title="Screenshot"/>
         </button>
-        <button class="mobile-button mobile-button-5" on:click={darkMode}>
+        <button class="mobile-button" on:click={openFile}>
+            <File title="Open File"/>
+        </button>
+        <button class="mobile-button" slot="save" on:click={writeFile}>
+            <Save title="Save File"/>
+        </button>
+        <button class="mobile-button mobile-button-5" slot="darkmode"  on:click={darkMode}>
             {#if theme}
                 <Sun/>
             {:else}
                 <Moon/>
             {/if}
         </button>
-
         <button class="mobile-button mobile-button-5" slot="share" on:click={share}>
             <Share />
         </button>

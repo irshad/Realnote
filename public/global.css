@@ -92,3 +92,8 @@ html, body {
 	.mobile-button-4 { background-color: var(--primary-color-yellow) !important; }
 	.mobile-button-5 { background-color: var(--primary-color-blue) !important; } */
 }
+
+
+button[disabled] {
+	/* opacity: 0.8; */
+}
