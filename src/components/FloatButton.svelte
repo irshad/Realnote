@@ -24,12 +24,6 @@
         <div class="share-button" transition:fade={{ duration: 200 }}>
             <slot name="share" />
         </div>
-        <div class="darkmode-button" transition:fade={{ duration: 200 }}>
-            <slot name="darkmode" />
-        </div>
-        <div class="save-button" transition:fade={{ duration: 200 }}>
-            <slot name="save" />
-        </div>
         <div class="floating-button-list" transition:fade={{ duration: 200 }}>
             <slot />
         </div>
@@ -65,18 +59,6 @@
     }
 
     .share-button {
-        position: absolute;
-        bottom: 74px;
-        right: 124px;
-    }
-
-    .darkmode-button {
-        position: absolute;
-        bottom: 74px;
-        right: 174px;
-    }
-
-    .save-button {
         position: absolute;
         bottom: 74px;
         right: 74px;

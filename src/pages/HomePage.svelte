@@ -200,13 +200,7 @@
         <button class="mobile-button mobile-button-4" on:click={screenShot} disabled={disabled}>
             <Screenshot title="Screenshot"/>
         </button>
-        <button class="mobile-button" on:click={openFile}>
-            <File title="Open File"/>
-        </button>
-        <button class="mobile-button" slot="save" on:click={writeFile}>
-            <Save title="Save File"/>
-        </button>
-        <button class="mobile-button mobile-button-5" slot="darkmode"  on:click={darkMode}>
+        <button class="mobile-button mobile-button-5"  on:click={darkMode}>
             {#if theme}
                 <Sun/>
             {:else}
