@@ -158,24 +158,24 @@
     </TypingArea>
 
     <Footer count={count}>
-        <button class="web-button" on:click={clearStorage}>
+        <button class="web-button" on:click={clearStorage} title="Clear Text">
             <Clear title="Clear"/>
         </button>
-        <button class="web-button" on:click={copyClipboard} disabled={disabled}>
+        <button class="web-button" on:click={copyClipboard} disabled={disabled} title="Copy Text">
             <Copy title="Copy"/>
         </button>
-        <button class="web-button" on:click={downloadFile} disabled={disabled}>
+        <button class="web-button" on:click={downloadFile} disabled={disabled} title="Download As Text File">
             <Download title="Download"/>
         </button>
         <button class="web-button" on:click={screenShot} disabled={disabled}>
             <Screenshot title="Screenshot"/>
         </button>
-        <button class="web-button" on:click={openFile}>
+        <button class="web-button" on:click={openFile} title="Open Text File">
             <File title="Open File"/>
         </button>
         {#if saveFile}        
-            <button class="web-button" on:click={writeFile}>
-                <Save title="Save File"/>
+            <button class="web-button" on:click={writeFile} title="Save File">
+                <Save />
             </button>
         {/if}
         <button class="web-button" on:click={darkMode}>
