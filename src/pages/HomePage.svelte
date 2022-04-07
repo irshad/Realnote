@@ -15,6 +15,7 @@
     import File from "../components/svg/File.svelte";
     import { hapticFeedback } from "../utils/vibrate";
     import Save from "../components/svg/Save.svelte";
+import FullScreen from "../components/svg/FullScreen.svelte";
 
     let theme = false;
     let text = '';
@@ -171,7 +172,7 @@
             <Screenshot title="Screenshot"/>
         </button>
         <button class="web-button" on:click={openFile} title="Open Text File">
-            <File title="Open File"/>
+            <File title="Open"/>
         </button>
         {#if saveFile}        
             <button class="web-button" on:click={writeFile} title="Save File">
@@ -184,6 +185,10 @@
             {:else}
                 <Moon/>
             {/if}
+        </button>
+
+        <button class="web-button" on:click={() => window.open('chrome-extension://dhbholhjgmnbafhjoomkffdmcdbieikl/index.html')}>
+            <FullScreen />
         </button>
     </Footer>
 

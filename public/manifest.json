@@ -1,6 +1,6 @@
 {
   "name": "Realnote",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Realnote is a simple single sheet note taking application that helps you to take notes on go.",
   "permissions": ["activeTab"],
   "action": {
