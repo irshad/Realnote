@@ -280,6 +280,10 @@
                 background: var(--primary-color-theme) !important;
                 color: var(--primary-color-black) !important;
             }
+
+            ::placeholder {
+                color: #b2b2b2;
+            }
         </style>
 
 	    <meta name="theme-color" content="#c9e943">
