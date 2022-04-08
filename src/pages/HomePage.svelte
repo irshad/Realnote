@@ -1,5 +1,7 @@
 <script>
     import { onMount } from "svelte";
+    import { hapticFeedback } from "../utils/vibrate";
+    import { ID } from "../utils/config";
     import TypingArea from "../components/TypingArea.svelte";
     import Footer from "../components/Footer.svelte";
     import Clear from "../components/svg/Clear.svelte";
@@ -13,9 +15,8 @@
     import FloatButton from "../components/FloatButton.svelte";
     import Share from "../components/svg/Share.svelte";
     import File from "../components/svg/File.svelte";
-    import { hapticFeedback } from "../utils/vibrate";
     import Save from "../components/svg/Save.svelte";
-import FullScreen from "../components/svg/FullScreen.svelte";
+    import FullScreen from "../components/svg/FullScreen.svelte";
 
     let theme = false;
     let text = '';
@@ -23,6 +24,7 @@ import FullScreen from "../components/svg/FullScreen.svelte";
     let menu;
     let fileHandle;
     let saveFile = false;
+    let fullscreen = true;
     $:count = text.length;
 
     onMount(() => {
@@ -150,6 +152,10 @@ import FullScreen from "../components/svg/FullScreen.svelte";
     }
 
     $:text.length > 0 ? disabled = false : disabled = true;
+
+    $:if(location.href == 'chrome-extension://' + ID + '/index.html') {
+        fullscreen = false;
+    }
 </script>
 
 <main>
@@ -165,21 +171,21 @@ import FullScreen from "../components/svg/FullScreen.svelte";
         <button class="web-button" on:click={copyClipboard} disabled={disabled} title="Copy Text">
             <Copy title="Copy"/>
         </button>
-        <button class="web-button" on:click={downloadFile} disabled={disabled} title="Download As Text File">
+        <button class="web-button" on:click={downloadFile} disabled={disabled} title="Download Text File">
             <Download title="Download"/>
         </button>
-        <button class="web-button" on:click={screenShot} disabled={disabled}>
+        <button class="web-button" on:click={screenShot} disabled={disabled} title="Download Screenshot">
             <Screenshot title="Screenshot"/>
         </button>
         <button class="web-button" on:click={openFile} title="Open Text File">
-            <File title="Open"/>
+            <File title="Open File"/>
         </button>
-        {#if saveFile}        
+        {#if saveFile && !fullscreen}        
             <button class="web-button" on:click={writeFile} title="Save File">
-                <Save />
+                <Save title="Save File" />
             </button>
         {/if}
-        <button class="web-button" on:click={darkMode}>
+        <button class="web-button" on:click={darkMode} title="Change theme">
             {#if theme}
                 <Sun/>
             {:else}
@@ -187,9 +193,11 @@ import FullScreen from "../components/svg/FullScreen.svelte";
             {/if}
         </button>
 
-        <button class="web-button" on:click={() => window.open('chrome-extension://dhbholhjgmnbafhjoomkffdmcdbieikl/index.html')}>
-            <FullScreen />
-        </button>
+        {#if fullscreen}        
+            <button class="web-button" on:click={() => window.open('chrome-extension://' + ID + '/index.html')} title="Open Full Screen">
+                <FullScreen />
+            </button>
+        {/if}
     </Footer>
 
     <FloatButton bind:menu>
