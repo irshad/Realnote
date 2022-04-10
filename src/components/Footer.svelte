@@ -12,7 +12,7 @@
         </div>
         <slot />
     </div>
-    <Title/>
+    <Title on:click/>
 </div>
 
 <style>

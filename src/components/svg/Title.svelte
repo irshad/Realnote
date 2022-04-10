@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="title">
+<div class="title" on:click>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 512 512" version="1.1">
         <g id="surface2281465">
             <path style=" stroke:none;fill-rule:nonzero; fill:var(--primary-color-theme); fill-opacity:1;" d="M 128 42.667969 C 125.054688 42.667969 122.195312 42.972656 119.417969 43.542969 C 99.96875 47.519531 85.332031 64.707031 85.332031 85.332031 L 85.332031 469.332031 L 256 405.332031 L 426.667969 469.332031 L 426.667969 85.332031 C 426.667969 82.398438 426.363281 79.519531 425.792969 76.75 C 422.382812 60.082031 409.253906 46.949219 392.582031 43.542969 C 389.804688 42.972656 386.945312 42.667969 384 42.667969 Z M 128 42.667969 "/>
@@ -19,6 +19,7 @@
         align-items: center;
         font-size: 20px;
         font-family: var(--primary-font-medium);
+        cursor: pointer;
     }
 
     .title svg {
