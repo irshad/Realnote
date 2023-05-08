@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@capacitor/android": "^2.4.0",
-    "@capacitor/cli": "^2.4.0",
+    "@capacitor/cli": "^5.0.1",
     "@capacitor/core": "^2.4.0",
     "atob": "^2.1.2",
     "btoa": "^1.2.1",
