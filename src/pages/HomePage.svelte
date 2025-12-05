@@ -9,6 +9,7 @@
     import Download from "../components/svg/Download.svelte";
     import Screenshot from "../components/svg/Screenshot.svelte";
     import Toast from "../stores/toast"
+    import { theme as colorStore } from "../stores/theme";
     import Flag from "../components/Flag.svelte";
     import Moon from "../components/svg/Moon.svelte";
     import Sun from "../components/svg/Sun.svelte";
@@ -25,9 +26,6 @@
     let fileHandle;
     let saveFile = false;
     let fullscreen = true;
-    let colors = ['#c9e943','#fa9e35','#fb7da7','#af98e6','#ffd33f','#51c7da'];
-	let currentColor = colors[0];
-    let i = 0;
 
     $:count = text.length;
 
@@ -50,8 +48,8 @@
             disabled = false;
         }
 
-        if(localStorage.getItem("color")) {
-            currentColor = localStorage.getItem("color");
+        if(text.length > 0) {
+            disabled = false;
         }
     });
     
@@ -165,25 +163,19 @@
         fullscreen = false;
     }
 
-    const changeColors = () => {
-        i++;
-		currentColor = colors[i];
-		if(i == colors.length -1) {
-			i = -1;
-		}
-        localStorage.setItem("color", currentColor);
+    $:if(location.href == 'chrome-extension://' + ID + '/index.html') {
+        fullscreen = false;
     }
 
-    $:cssVarStyles = `--primary-color-theme:${currentColor}`;
 </script>
 
-<main style="{cssVarStyles}">
+<main>
     <TypingArea cssClass="screenshot-area">
         <!-- svelte-ignore a11y-autofocus -->
         <textarea class="" id="data" autofocus placeholder=" Type your text here..." bind:value={text} on:keyup={autosave}/>
     </TypingArea>
 
-    <Footer count={count} on:click={changeColors}>
+    <Footer count={count} on:click={colorStore.changeColor}>
         <button class="web-button" on:click={clearStorage} title="Clear Text">
             <Clear title="Clear"/>
         </button>
